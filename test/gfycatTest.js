@@ -79,6 +79,14 @@ describe('gfycat.isGfycatURL', function () {
         
         assert.equal(expected, actual);
     });
+    
+    it('should still work with subdomain URLs', function () {
+        var input    = "http://giant.gfycat.com/UnitedImpureAlaskajingle.gif";
+        var expected = true;
+        var actual   = gfycat.isGfycatURL(input);
+        
+        assert.equal(expected, actual);
+    });
 });
 
 
